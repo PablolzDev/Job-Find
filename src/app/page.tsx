@@ -1,8 +1,7 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Adm from "./ui/templates/Admin";
 
 export default function Home() {
   return (
-   <h1>hola</h1>
+   <Adm/>
   );
 }

@@ -1,37 +1,17 @@
-//Background Colors
-//gradiante:: 
-$white: rgb(255, 255, 255);
-$light-grey-windowI:rgb(243, 244, 246); //pestañas inactivas
-$light-grey-buttonP:rgb(229, 231, 235);
-$light-purple: rgb(192, 132, 252);  // Morado claro específico
-$pink: rgb(236, 72, 153);
-
-//Text Colors 
-$black:rgb(31, 41, 55);
-$background:linear-gradient(85deg, rgba(192,132,252,1) 0%, rgba(236,72,153,1) 47%, rgba(239,68,68,1) 100%);
-$medium-grey: rgb(75, 85, 99);
-$light-grey-text:  rgb(107, 114, 128);
-$white: rgb(255, 255, 255);
-
-//Acent colors and buttons
-$purple: rgb(168, 85, 247); // Hover: rgb(147, 51, 234)
-$pink-companies:  rgb(236, 72, 153); // Hover: rgb(219, 39, 119)
-$pink-deleteb: rgb(239, 68, 68);// Texto: rgb(239, 68, 68) //  Hover texto: rgb(220, 38, 38) //  Hover fondo: rgb(254, 242, 242)
-
-//Border Colors and focus
-$grey-border:rgb(229, 231, 235);
-$purple-focus: rgb(233, 213, 255);
-$pink-focus: rgb(251, 207, 232);
-
 body {
     background: rgb(192, 132, 252);
-    background: linear-gradient(
-      105deg,
-      rgb(192, 132, 252) -30%,
-      rgb(236, 72, 153) 3 217%,
-      rgb(239, 68, 68) 100%
-    );
+    background: linear-gradient(105deg,
+            rgb(192, 132, 252) -30%,
+            rgb(236, 72, 153) 47%,
+            rgb(239, 68, 68) 100%);
     min-height: 100vh;
     margin: 0;
     padding: 0;
-  }
+    font-family: var(--font-poppins);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
