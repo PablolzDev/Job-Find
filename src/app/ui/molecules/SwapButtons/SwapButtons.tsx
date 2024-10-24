@@ -8,7 +8,6 @@ import { useRouter } from 'next/navigation';
 export default function SwapButtons() {
     const [activeButton, setActiveButton] = useState('vacancies');
     const router = useRouter()
-
     const HandleChange =(type:string) => {
         setActiveButton(type)
 
@@ -21,7 +20,7 @@ export default function SwapButtons() {
     }
     return (
         <div className={styles.container}>
-            <ButtonS title='vacancies' className={activeButton === 'vacancies' ? 'active-vacancies' : ''} onClick={ () => HandleChange('vacancies') }  >
+            <ButtonS title='Vacantes' className={activeButton === 'vacancies' ? 'active-vacancies' : ''} onClick={ () => HandleChange('vacancies') }  >
                 <Briefcase strokeWidth={1.25} />  Vacancies
             </ButtonS>
             <ButtonS title='Companies' className={activeButton === 'companies' ? 'active-companies' : ''} onClick={ () => HandleChange('companies') }>
