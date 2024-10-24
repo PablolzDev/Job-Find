@@ -1,0 +1,46 @@
+@import '../../../color';
+.HeaderContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.Containerleft {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+
+.ContainerRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+
+    h2 {
+        color: $black;
+        margin-left: 4%;
+        margin-top: 1%;
+        font-weight: 600;
+    }
+
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+
+.buttonRounded {
+    padding-block: .5rem;
+    padding-inline: 1rem;
+    border-radius: 50px;
+    background-color: $pink;
+    color: $white;
+    width: 15%;
+    height: fit-content;
+    margin-right: 6%;
+}

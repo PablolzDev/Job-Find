@@ -1,3 +1,17 @@
-.buttonV {
-    height: 100%;
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: none;
+    padding: 8px 24px;
+    border-radius: 9999px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+
+    &:hover {
+        cursor: pointer;
+    }
 }
+

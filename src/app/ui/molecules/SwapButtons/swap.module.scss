@@ -1,0 +1,38 @@
+@import '../../../color';
+
+.container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color:$light-grey-windowI;
+    padding: 4px;
+    border-radius: 9999px;
+    width: fit-content;
+    margin-left: 5%;
+
+    :global {
+        button {
+            &.active-vacancies {
+                background-color: $purple;
+                color: $white;
+                &:hover {
+                    background-color: $purple-Hover; 
+                }
+            }
+
+            &.active-companies {
+                background-color: $pink;
+                color: $white;
+            }
+
+            &:not(.active-vacancies):not(.active-companies) {
+                color: $black;
+
+                &:hover {
+                    color: #1f2937;
+                }
+            }
+        }
+    }
+    
+}

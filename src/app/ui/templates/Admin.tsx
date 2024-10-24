@@ -1,11 +1,15 @@
 import React from 'react'
-import Panel from '../organisms/panel/panel'
-import SwapButtons from '../molecules/SwapButtons'
+import Panel from '../organisms/panel/Panel'
+import Header from '../organisms/headers/Header'
 
-export default function Adm() {
+interface IProps {
+  type?: "vacancies" | "companies";
+}
+
+export default function Adm({type = "vacancies"}: IProps) {
   return (
     <Panel>
-      <SwapButtons/>
+      <Header label={ type === "vacancies" ? "Agregar vacante" : "Agregar compania"} />
     </Panel>
   )
 }

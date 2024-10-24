@@ -1,0 +1,21 @@
+@import '../../../color';
+
+.SearchInput {
+    padding-block: .5rem;
+    padding-left: 40px;
+    border-radius: 50px;
+    margin-right: 100px;
+    border: 1px solid $grey-border;
+}
+
+.SearchIcon {
+    position: absolute;
+    margin-left: 10px;
+}
+
+.SearchInputContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: $light-grey-text;
+}
