@@ -1,18 +1,18 @@
 import React from 'react'
 import Card from '../organisms/card/Card'
-import { ICard } from '../../types/card'
+import { ICard, IJobs } from '../../types/card';
+import styles from './cardList.module.scss'
 
 interface Iprops {
-    data: ICard[];
+    data: (ICard | IJobs)[];
 }
 
 export default function ListCard({ data }: Iprops) {
     return (
-        <main>
-            {data.map((job, index) => (
-                <Card key={index} {...job} />
+        <main className={styles.Main}>
+            {data.map((item, index) => (
+                <Card key={index} data={item} />
             ))}
-
         </main>
 
     )

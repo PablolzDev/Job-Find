@@ -4,3 +4,10 @@ export interface ICard {
     status: boolean;
     company: string;
 }
+
+
+export interface IJobs {
+    companies: string;
+    city: string;
+    contact: string;
+}

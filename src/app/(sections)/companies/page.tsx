@@ -1,42 +1,46 @@
 import React from 'react';
 import ListCard from '@/app/ui/templates/ListCard';
-import {ICard} from '../../types/card'
+import {IJobs} from '../../types/card'
+import style from './companies.module.scss'
+
 
 interface IProps {
-    data?: ICard[];
+    data?: IJobs[];
 }
 
 
-const JOBS_DATA: ICard[] = [
+const companies_Data: IJobs[] = [
     {
-        title: 'Portfolio',
-        jobDescription: 'At Parcham Organization, I proudly coached aspiring football players, fostering resilience and teamwork while instilling a sense of social responsibility. Witnessing their growth on and off the field was a truly rewarding experience, empowering them to dream big and create positive change.',
-        status: false,
-        company: "globant"
+        companies: "Hola",
+        city: 'ciuda de mexico',
+        contact: '555-0101'
+        
     },
     {
-        title: 'Portfolio',
-        jobDescription: 'At Parcham Organization, I proudly coached aspiring football players, fostering resilience and teamwork while instilling a sense of social responsibility. Witnessing their growth on and off the field was a truly rewarding experience, empowering them to dream big and create positive change.',
-        status: false,
-        company: "globant"
+        companies: "TechCorp",
+        city: 'ciuda de mexico',
+        contact: '555-0101'
     },
     {
-        title: 'Portfolio',
-        jobDescription: 'At Parcham Organization, I proudly coached aspiring football players, fostering resilience and teamwork while instilling a sense of social responsibility. Witnessing their growth on and off the field was a truly rewarding experience, empowering them to dream big and create positive change.',
-        status: false,
-        company: "globant"
+        companies: "TechCorp",
+        city: 'ciuda de mexico',
+        contact: '555-0101'
     },
     {
-        title: 'Portfolio',
-        jobDescription: 'At Parcham Organization, I proudly coached aspiring football players, fostering resilience and teamwork while instilling a sense of social responsibility. Witnessing their growth on and off the field was a truly rewarding experience, empowering them to dream big and create positive change.',
-        status: false,
-        company: "globant"
+        companies: "TechCorp",
+        city: 'ciuda de mexico',
+        contact: '555-0101'
     },
+    {
+        companies: "TechCorp",
+        city: 'ciuda de mexico',
+        contact: '555-0101'
+    }
 ];
 
-export default function CompaniesPage({ data = JOBS_DATA }: IProps) {
+export default function CompaniesPage({ data = companies_Data }: IProps) {
     return (
-        <div>
+        <div className={style.container}>
             <ListCard data={data} />
         </div>
     );
