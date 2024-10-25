@@ -7,9 +7,11 @@ interface Iprops {
 }
 
 export default function PrincipalLayout({children}: Iprops) {
+
+  
   return (
     <Panel>
-      <Header label='Panel Admin'/>
+      <Header/>
       {children}
     </Panel>
   )

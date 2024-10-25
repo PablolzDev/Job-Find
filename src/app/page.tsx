@@ -1,7 +1,8 @@
-import Adm from "./ui/templates/Admin";
+
+import { redirect } from "next/navigation";
 
 export default function Home() {
   return (
-   <Adm/>
-  );
+   redirect("/vacancies")
+  )
 }

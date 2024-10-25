@@ -1,46 +1,62 @@
 import React from 'react';
 import ListCard from '@/app/ui/templates/ListCard';
-import {IJobs} from '../../types/card'
+import {ICard} from '../../types/card'
 import style from '../companies/companies.module.scss'
 
 
 interface IProps {
-    data?: IJobs[];
+    data?: ICard[];
 }
 
 
-const companies_Data: IJobs[] = [
+const companies_Data: ICard[] = [
     {
-        companies: "TechCorp",
-        city: 'ciuda de mexico',
-        contact: '555-0101'
+        title: "Desarrollador Frontend",
+        jobDescription: 'Se busca desarrollador con experiencia en React',
+        status: true,
+        company: "TechCorp"
+    },
+    {
+        title: "Desarrollador Frontend",
+        jobDescription: 'Se busca desarrollador con experiencia en React',
+        status: true,
+        company: "TechCorp"
+    },
+    {
         
+        title: "Desarrollador Frontend",
+        jobDescription: 'Se busca desarrollador con experiencia en React',
+        status: true,
+        company: "TechCorp"
     },
     {
-        companies: "TechCorp",
-        city: 'ciuda de mexico',
-        contact: '555-0101'
+
+        
+        title: "Desarrollador Frontend",
+        jobDescription: 'Se busca desarrollador con experiencia en React',
+        status: true,
+        company: "TechCorp"
     },
     {
-        companies: "TechCorp",
-        city: 'ciuda de mexico',
-        contact: '555-0101'
+        
+        title: "Desarrollador Frontend",
+        jobDescription: 'Se busca desarrollador con experiencia en React',
+        status: true,
+        company: "TechCorp"
     },
     {
-        companies: "TechCorp",
-        city: 'ciuda de mexico',
-        contact: '555-0101'
-    },
-    {
-        companies: "TechCorp",
-        city: 'ciuda de mexico',
-        contact: '555-0101'
+        
+        title: "Desarrollador Frontend",
+        jobDescription: 'Se busca desarrollador con experiencia en React',
+        status: true,
+        company: "TechCorp"
     }
 ];
 
 export default function Page({ data = companies_Data }: IProps) {
     return (
         <div className={style.container}>
+            
             <ListCard data={data} />
         </div>
     );

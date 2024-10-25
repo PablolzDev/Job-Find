@@ -35,12 +35,18 @@ const companies_Data: IJobs[] = [
         companies: "TechCorp",
         city: 'ciuda de mexico',
         contact: '555-0101'
+    },
+    {
+        companies: "TechCorp",
+        city: 'ciuda de mexico',
+        contact: '555-0101'
     }
 ];
 
 export default function CompaniesPage({ data = companies_Data }: IProps) {
     return (
         <div className={style.container}>
+
             <ListCard data={data} />
         </div>
     );
