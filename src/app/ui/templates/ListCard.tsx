@@ -19,7 +19,7 @@ export default function ListCard({ data }: Iprops) {
                 ))}
             </main>
 
-            <Pagination currentPage={1} totalPages={2} className="mi-clase-adicional"/>
+            <Pagination data={data} className="mi-clase-adicional"/>
         </div>
 
     )
