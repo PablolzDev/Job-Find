@@ -7,3 +7,10 @@
   gap: 20px;
   justify-content: flex-start; // Alineación al inicio para mejor distribución
 }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}

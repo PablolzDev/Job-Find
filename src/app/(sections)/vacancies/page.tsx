@@ -1,59 +1,13 @@
 import React from 'react';
 import ListCard from '@/app/ui/templates/ListCard';
-import {ICard} from '../../types/card'
+import { ApiService } from '@/services/api.service';
 import style from '../companies/companies.module.scss'
 
+const useApiService = new ApiService()
 
-interface IProps {
-    data?: ICard[];
-}
+export default async function Page() {
 
-
-const companies_Data: ICard[] = [
-    {
-        title: "Desarrollador Frontend",
-        jobDescription: 'Se busca desarrollador con experiencia en React',
-        status: true,
-        company: "TechCorp"
-    },
-    {
-        title: "Desarrollador Frontend",
-        jobDescription: 'Se busca desarrollador con experiencia en React',
-        status: true,
-        company: "TechCorp"
-    },
-    {
-        
-        title: "Desarrollador Frontend",
-        jobDescription: 'Se busca desarrollador con experiencia en React',
-        status: true,
-        company: "TechCorp"
-    },
-    {
-
-        
-        title: "Desarrollador Frontend",
-        jobDescription: 'Se busca desarrollador con experiencia en React',
-        status: true,
-        company: "TechCorp"
-    },
-    {
-        
-        title: "Desarrollador Frontend",
-        jobDescription: 'Se busca desarrollador con experiencia en React',
-        status: true,
-        company: "TechCorp"
-    },
-    {
-        
-        title: "Desarrollador Frontend",
-        jobDescription: 'Se busca desarrollador con experiencia en React',
-        status: true,
-        company: "TechCorp"
-    }
-];
-
-export default function Page({ data = companies_Data }: IProps) {
+    const data = await useApiService.findAll(`vacants?`)
     return (
         <div className={style.container}>
             
