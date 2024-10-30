@@ -25,8 +25,9 @@ const useApiService = new ApiService()
 export default async function CompaniesPage({searchParams}: IProps ) {
     const page = searchParams.page ? parseInt(searchParams.page) : 1;
     const size = searchParams.size ? parseInt(searchParams.size) : 6;
+    const name = searchParams.name ? String(searchParams.name) : "";
 
-    const data = await useApiService.findAll(`company?page=${page}&size=${size}`)
+    const data = await useApiService.findAll(`company?page=${page}&size=${size}&name=${name}`)
     return (
         <div className={style.container}>
             <ListCard data={data} />

@@ -4,10 +4,11 @@ interface InputProps {
     type:string;
     className?: string;
     placeholder: string;
+    onChange: (e:  React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export default function Input({type, className, placeholder}: InputProps) {
+export default function Input({type, className, placeholder, onChange}: InputProps) {
   return (
-    <input type={type} className={className} placeholder={placeholder} />
+    <input onChange={onChange} type={type} className={className} placeholder={placeholder} />
   )
 }
