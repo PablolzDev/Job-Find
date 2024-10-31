@@ -5,10 +5,11 @@ interface Ibuttonprops {
     title: string
     className?: string
     children: ReactNode
+    onClick: () => void;
 }
 
-export default function ButtonM({title, className, children}: Ibuttonprops) {
+export default function ButtonM({title, className, children, onClick}: Ibuttonprops) {
   return (
-    <button title={title}  className={`${styles.button} ${className}`} >{children}</button>
+    <button title={title} onClick={onClick}  className={`${styles.button} ${className}`} >{children}</button>
   )
 }

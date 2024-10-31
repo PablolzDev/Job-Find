@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 import SwapButtons from '../../molecules/SwapButtons/SwapButtons'
 import SearchBar from '../../molecules/SearchBar/searchBar'
 import styles from './Header.module.scss'
@@ -14,6 +14,13 @@ import { usePathname } from 'next/navigation'
 export default function Header() {
     const currentPath = usePathname()
 
+    const [openModal, setOpenModal] = useState(false)
+
+    function handleOpen() {
+        setOpenModal(true)
+        console.log("funciona")
+    }
+
 
     return (
         <header className={styles.HeaderContainer}>
@@ -26,13 +33,14 @@ export default function Header() {
                 <h2> {currentPath === '/vacancies' 
                         ? 'Vacancies' 
                         : 'Companies'}</h2>
-                <ButtonM title='modal' className={styles.buttonRounded}>
+                <ButtonM onClick={handleOpen} title='modal' className={styles.buttonRounded}>
                     <CirclePlus />
                     {currentPath === '/vacancies' 
                         ? 'Add Vacancie' 
                         : 'Add Companie'}
              
                 </ButtonM>
+                
             </div>
         </header>
     )
