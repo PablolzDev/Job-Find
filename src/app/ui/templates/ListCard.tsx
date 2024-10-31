@@ -7,15 +7,17 @@ import Pagination from '../molecules/Pagination/Pagination';
 
 interface Iprops {
     data: IVacancy | ICompany;
+    page: 'Vacante' | 'Company';
+
 }
 
-export default function ListCard({ data }: Iprops) {
+export default function ListCard({ data, page }: Iprops) {
     return (
 
         <div className={styles.container} >
             <main className={styles.Main}>
                 {data.content.map((item, index) => (
-                    <Card key={index} data={item} />
+                    <Card key={index} data={item}  page={page}/>
                 ))}
             </main>
 

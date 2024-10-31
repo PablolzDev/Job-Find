@@ -30,7 +30,7 @@ export default async function Page({searchParams}: IProps) {
     return (
         <div className={style.container}>
             
-            <ListCard data={data} />
+            <ListCard page="Vacante" data={data} />
         </div>
     );
 }
