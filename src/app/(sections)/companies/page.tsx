@@ -30,7 +30,7 @@ export default async function CompaniesPage({searchParams}: IProps ) {
     const data = await useApiService.findAll(`company?page=${page}&size=${size}&name=${name}`)
     return (
         <div className={style.container}>
-            <ListCard data={data} />
+            <ListCard page="Company" data={data} />
         </div>
     );
 }
