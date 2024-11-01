@@ -22,7 +22,7 @@
     border-radius: 10px;
     gap: 30px;
     justify-content: center;
-    background-color: $bg-white-primary;
+    background-color: $white;
 
     .modalTitle {
       font-size: 13px;
@@ -31,7 +31,7 @@
       align-items: center;
 
       .btnIconSecondary{
-        color: $txt-dark-gray;
+        color: $light-grey-text;
         border-radius: 0;
         background-color: transparent;
         cursor: pointer;
@@ -41,12 +41,12 @@
 }
 
 .btnBgPrimary {
-  background-color: $btn-purple-secundary;
+  background-color: $purple;
   padding: 20px;
   display: flex;
 justify-content: center;
 }
 
 .btnBgSecondary {
-  background-color: $btn-pink-primary;
+  background-color: $pink;
 }

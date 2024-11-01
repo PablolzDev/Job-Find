@@ -1,4 +1,4 @@
-import styles from "./InputContiner.module.scss"
+import styles from "./InputContainer.module.scss"
 import Label from "../../atoms/Label"
 
 interface IProps {

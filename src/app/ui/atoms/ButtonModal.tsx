@@ -5,7 +5,7 @@ interface Ibuttonprops {
     title: string
     className?: string
     children: ReactNode
-    onClick: () => void;
+    onClick?: () => void;
 }
 
 export default function ButtonM({title, className, children, onClick}: Ibuttonprops) {

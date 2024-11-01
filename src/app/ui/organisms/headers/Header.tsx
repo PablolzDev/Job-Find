@@ -6,20 +6,35 @@ import styles from './Header.module.scss'
 import ButtonM from '../../atoms/ButtonModal'
 import { CirclePlus } from 'lucide-react';
 import { usePathname } from 'next/navigation'
+import FormV from '../FormV/FormV'
+
+interface IProps {
+    addButtonLabel: string;
+    titlePrimary: string;
+    type: string;
+}
 
 
 
 
-
-export default function Header() {
+export default function Header(addButtonLabel, titlePrimary, type): IProps {
     const currentPath = usePathname()
 
     const [openModal, setOpenModal] = useState(false)
 
     function handleOpen() {
-        setOpenModal(true)
-        console.log("funciona")
-    }
+        if (type === "Vacantes") {
+            setOpenModal(true);
+            return;
+        }
+        setOpenModal(false);
+
+    };
+
+
+    setOpenModal(true)
+    console.log("funciona")
+
 
 
     return (
@@ -30,18 +45,28 @@ export default function Header() {
             </div>
 
             <div className={styles.ContainerRight}>
-                <h2> {currentPath === '/vacancies' 
-                        ? 'Vacancies' 
-                        : 'Companies'}</h2>
+                <h2> {currentPath === '/vacancies'
+                    ? 'Vacancies'
+                    : 'Companies'}</h2>
                 <ButtonM onClick={handleOpen} title='modal' className={styles.buttonRounded}>
                     <CirclePlus />
-                    {currentPath === '/vacancies' 
-                        ? 'Add Vacancie' 
+                    {currentPath === '/vacancies'
+                        ? 'Add Vacancie'
                         : 'Add Companie'}
-             
+
                 </ButtonM>
-                
+
             </div>
+
+            {openModal === true && (
+                <FormV
+                    onClose={() => setOpenModal(false)}
+                    titlePrimary="Agregar Vacante"
+                    editButtonLabel="Agregar"
+                />
+            )}
+           
         </header>
     )
+
 }

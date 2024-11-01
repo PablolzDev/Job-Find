@@ -1,15 +1,16 @@
 import React from 'react'
 
 interface InputProps {
-    type:string;
+    type?:string;
     className?: string;
-    placeholder: string;
+    placeholder?: string;
     required?: boolean;
-    onChange: (e:  React.ChangeEvent<HTMLInputElement>) => void;
+    onChange?: (e:  React.ChangeEvent<HTMLInputElement>) => void;
+    name: string;
 }
 
-export default function Input({type, className,required, placeholder, onChange}: InputProps) {
+export default function Input({type, className,required, placeholder, onChange, name}: InputProps) {
   return (
-    <input onChange={onChange} required={required} type={type} className={className} placeholder={placeholder} />
+    <input name={name} onChange={onChange} required={required} type={type} className={className} placeholder={placeholder} />
   )
 }

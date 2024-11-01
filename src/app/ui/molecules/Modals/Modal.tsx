@@ -1,5 +1,5 @@
 import { X } from 'lucide-react';
-import styles from "./ModalContainer.module.scss";
+import styles from "./Modal.module.scss";
 import { CircleArrowUp } from 'lucide-react';
 
 interface IProps {
