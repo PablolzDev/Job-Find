@@ -27,7 +27,7 @@ export default function SearchBar() {
 
   return (
     <div className={styles.SearchInputContainer}>
-     <Search className={styles.SearchIcon} /> <Input onChange={handleChange} type='search' className={styles.SearchInput} placeholder='search'></Input>
+     <Search className={styles.SearchIcon} /> <Input onChange={handleChange} type='search' name='' className={styles.SearchInput} placeholder='search'></Input>
     </div>
   )
 }

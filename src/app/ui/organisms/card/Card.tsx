@@ -25,7 +25,8 @@ export default function Card({ data, page }: UnifiedCardProps) {
                         <p>{data.status ? 'Active' : 'Inactive'}</p>
                         <p>{data.company.name}</p>
                     </div>
-                   
+                    <ButtonsCard page={page} data={data} />
+
                 </>
             ) : (
                 <>
