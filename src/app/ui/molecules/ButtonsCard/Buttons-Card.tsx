@@ -5,15 +5,15 @@ import styles from './buttonCard.module.scss'
 import { ContentCompany } from '@/models/company.model';
 
 interface IProps {
-    page: string;
-    data: ContentCompany;
+  page: string;
+  data: ContentCompany;
 }
 
-export default function ButtonsCard({page, data}: IProps) {
+export default function ButtonsCard({ page, data }: IProps) {
   return (
     <div className={styles.iconsFlex}>
-        <EditCard />
-        <DeleteButton idCard={data.id} page={page}  />
+      <EditCard />
+      <DeleteButton idCard={data.id} page={page} />
     </div>
-  )
+  );
 }

@@ -25,8 +25,17 @@ export default function Card({ data, page }: UnifiedCardProps) {
                         <p>{data.status ? 'Active' : 'Inactive'}</p>
                         <p>{data.company.name}</p>
                     </div>
-                    <ButtonsCard page={page} data={data} />
-
+                    <ButtonsCard 
+                        page={page}
+                        data={{
+                            id: data.id.toString(),
+                            name: data.company.name,
+                            location: data.company.location,
+                            contact: data.company.contact,
+                            // Si necesitas vacants, puedes pasar un array vacío o los datos reales
+                            vacants: []
+                        }}
+                    />
                 </>
             ) : (
                 <>
@@ -35,7 +44,10 @@ export default function Card({ data, page }: UnifiedCardProps) {
                         <p>Ciudad: {data.location}</p>
                         <p>Contacto: {data.contact}</p>
                     </div>
-                    <ButtonsCard page={page} data={data} />
+                    <ButtonsCard 
+                        page={page} 
+                        data={data as ContentCompany} 
+                    />
                 </>
             )}
         </div>
