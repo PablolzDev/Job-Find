@@ -1,5 +1,5 @@
 "use client"
-import React from 'react'
+import React, { Suspense } from 'react'
 import SwapButtons from '../../molecules/SwapButtons/SwapButtons'
 import SearchBar from '../../molecules/SearchBar/searchBar'
 import styles from './Header.module.scss'
@@ -12,7 +12,9 @@ export default function Header() {
         <header className={styles.HeaderContainer}>
             <div className={styles.Containerleft}>
                 <SwapButtons />
-                <SearchBar />
+                <Suspense fallback={<div>Loading...</div>}>
+                    <SearchBar />
+                </Suspense>
             </div>
 
             <div className={styles.ContainerRight}>

@@ -1,3 +1,4 @@
+"use client"
 import React from 'react'
 import styles from './search.module.scss'
 import Input from '../../atoms/input'

@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import React from 'react'
 import styles from './Card.module.scss'
 import { ContentCompany } from '@/models/company.model'
@@ -19,11 +19,11 @@ export default function Card({ data, page }: UnifiedCardProps) {
         <div className={styles.card}>
             {isJobCard(data) ? (
                 <>
-                    <h2>{data.title}</h2>
+                    <h2 className={styles.title}>{data.title}</h2>
                     <div className={styles.InfoContainer}>
-                        <p>{data.description}</p>
-                        <p>{data.status ? 'Active' : 'Inactive'}</p>
-                        <p>{data.company.name}</p>
+                        <p className={styles.description}>{data.description}</p>
+                        <p className={styles.status}>{data.status ? 'Active' : 'Inactive'}</p>
+                        <p className={styles.companyName}>{data.company.name}</p>
                     </div>
                     <ButtonsCard 
                         page={page}
@@ -32,21 +32,20 @@ export default function Card({ data, page }: UnifiedCardProps) {
                             name: data.company.name,
                             location: data.company.location,
                             contact: data.company.contact,
-                            // Si necesitas vacants, puedes pasar un array vacío o los datos reales
                             vacants: []
                         }}
                     />
                 </>
             ) : (
                 <>
-                    <h2>{data.name}</h2>
+                    <h2 className={styles.title}>{data.name}</h2>
                     <div className={styles.InfoContainer}>
-                        <p>Ciudad: {data.location}</p>
-                        <p>Contacto: {data.contact}</p>
+                        <p className={styles.location}>Ciudad: {data.location}</p>
+                        <p className={styles.contact}>Contacto: {data.contact}</p>
                     </div>
                     <ButtonsCard 
-                        page={page} 
-                        data={data as ContentCompany} 
+                        page={page}
+                        data={data as ContentCompany}
                     />
                 </>
             )}
